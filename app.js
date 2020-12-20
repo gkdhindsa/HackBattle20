@@ -218,6 +218,7 @@ app.post('/register',upload.single('DP'),function(req,res,next){
 		}
 	})
 })
+//login based routes here
 
 
 
