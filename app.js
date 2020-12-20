@@ -107,6 +107,7 @@ app.use(function(req,res,next){
 	next();
 })	
 
+//check reminders 
 function checkReminders(data){
 	var d = new Date(); 
 	var currDay = d.getDay();
@@ -430,7 +431,7 @@ app.get('/circle',isLoggedIn,(req,res)=>{
 })
 
 
-
+//store mycircle photos
 var storageCircle = multer.diskStorage({ 
     destination: (req, file, cb) => {
     if (!fs.existsSync('uploads/'+ req.user.username )){
